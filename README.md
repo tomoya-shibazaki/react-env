@@ -4,3 +4,8 @@
 
 ## redux
 - https://www.youtube.com/watch?v=0W6i5LYKCSI
+
+## CSS
+### semantic-ui
+- https://cdnjs.com/libraries/semantic-ui
+- https://semantic-ui.com/
