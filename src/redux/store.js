@@ -10,7 +10,7 @@ const middlware = [thunk]
 const store = createStore(
   reducers,
   initialState,
-  composeWithDevTools(applyMiddleware(...middlware))
+  (process.env.NODE_ENV !== 'production') ? composeWithDevTools(applyMiddleware(...middlware)) : undefined
 )
 
 export default store
