@@ -17,7 +17,10 @@ module.exports = {
                 test: /\.(js|jsx)$/,
                 exclude: /nodeModules/,
                 use: {
-                    loader: 'babel-loader'
+                    loader: 'babel-loader',
+                    options: {
+                        plugins: ['@babel/plugin-transform-runtime']
+                    }
                 }
             },
             {
@@ -26,5 +29,8 @@ module.exports = {
             }
         ]
     },
-    plugins: [new HtmlWebpackPlugin({ template: './src/index.html' }), new MiniCssExtractPlugin()],
+    plugins: [
+        new HtmlWebpackPlugin({ template: './src/index.html' }), 
+        new MiniCssExtractPlugin(),
+    ],
 }
